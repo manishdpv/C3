@@ -1,0 +1,100 @@
+<html lang="en">
+    
+  <head>
+      
+    <meta charset="utf-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+ <body data-spy="scroll" data-target="#navbar" data-offset="150">
+      
+        <nav class="navbar navbar-expand-lg navbar-light bg-light active">
+        <div class="container-fluid">
+    <a class="navbar-brand" href="#">We Care</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+         <li class="nav-item">
+              <a class="nav-link" href="#footer">Book a Doctor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Login</a>
+            </li>
+       
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+<style>
+    select {
+    text-indent: 29%;
+    text-align: center;
+	width: 350px;
+	height: 25px;
+	margin-bottom: 5px;
+    }
+     
+</style>
+                <input class="form-input" type="text" name="blood_urea" placeholder="Enter your blood_urea"><br>
+
+<input class="form-input" type="text" name='blood glucose random' placeholder="Enter your blood glucose random"><br>
+
+<select id="anemia" name="anemia">
+<option value="">Select anemia or not</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select><br>
+<select id="coronary_artery_disease" name="coronary_artery_disease">
+<option value="">Select coronary artery disease or not</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select><br>
+<select id="pus_cell" name="pus_cell">
+<option value="">Select pus_cell or not</option>
+    <option value="0">normal</option>
+    <option value="1">abnormal</option>
+  </select><br>
+<select id="red_blood_cell" name="red_blood_cell">
+<option value="">Select red_blood_cell level</option>
+     <option value="0">normal</option>
+    <option value="1">abnormal</option>
+  </select><br>
+<select id="diabetesmellitus" name="diabetesmellitus">
+<option value="">Select diabetesmellitus or not</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select><br>
+<select id="pedal_edema" name="pedal_edema">
+<option value="">Select pedal_edema or not</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select><br>
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+       
+    </body>
+</html>
